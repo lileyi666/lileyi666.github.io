@@ -1,187 +1,32 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lileyi - 登录页面</title>
+    <title>我的GitHub网站</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .login-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-        }
-        
-        .login-header {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
             text-align: center;
-            margin-bottom: 2rem;
+            background: #f0f8ff;
         }
-        
-        .login-header h1 {
+        h1 {
             color: #333;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
         }
-        
-        .login-header p {
-            color: #666;
-            font-size: 1rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-weight: bold;
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        
-        .login-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .login-footer {
-            text-align: center;
-            margin-top: 1.5rem;
-            color: #666;
-        }
-        
-        .login-footer a {
+        a {
             color: #667eea;
             text-decoration: none;
         }
-        
-        .error-message {
-            color: #e74c3c;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        
-        .success-message {
-            color: #27ae60;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: none;
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <h1>Lileyi</h1>
-            <p>欢迎登录系统</p>
-        </div>
-        
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="username">用户名</label>
-                <input type="text" id="username" placeholder="请输入用户名" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="password">密码</label>
-                <input type="password" id="password" placeholder="请输入密码" required>
-            </div>
-            
-            <div class="error-message" id="errorMessage">
-                用户名或密码错误！
-            </div>
-            
-            <div class="success-message" id="successMessage">
-                登录成功！正在跳转...
-            </div>
-            
-            <button type="submit" class="login-btn">登录</button>
-        </form>
-        
-        <div class="login-footer">
-            <p>还没有账号？<a href="#">立即注册</a></p>
-            <p><a href="#">忘记密码？</a></p>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('errorMessage');
-            const successMessage = document.getElementById('successMessage');
-            
-            // 隐藏之前的消息
-            errorMessage.style.display = 'none';
-            successMessage.style.display = 'none';
-            
-            // 简单的验证逻辑
-            if (username === 'lileyi' && password === '123456') {
-                successMessage.style.display = 'block';
-                // 模拟登录成功
-                setTimeout(() => {
-                    alert('登录成功！欢迎 ' + username);
-                    // 这里可以添加页面跳转逻辑
-                    // window.location.href = 'dashboard.html';
-                }, 1000);
-            } else {
-                errorMessage.style.display = 'block';
-            }
-        });
-        
-        // 输入时隐藏错误信息
-        document.getElementById('username').addEventListener('input', function() {
-            document.getElementById('errorMessage').style.display = 'none';
-        });
-        
-        document.getElementById('password').addEventListener('input', function() {
-            document.getElementById('errorMessage').style.display = 'none';
-        });
-    </script>
+    <h1>欢迎来到我的网站！</h1>
+    <p>GitHub Pages 部署成功 🎉</p>
+    <p><a href="Illeyi.html">访问登录页面</a></p>
+    <p>网站地址：https://lileyi666.github.io</p>
 </body>
 </html>
